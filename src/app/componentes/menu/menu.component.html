@@ -1,0 +1,69 @@
+<!--div>
+    <button routerLink="/Principal">Principal</button>
+    <button (click)="Juego('Adivina')">Adivina</button>
+    <button (click)="Juego('Agilidad')">Agilidad</button>
+    <button (click)="Juego('AdivinaMasListado')">Adivina+listado</button>
+    <button (click)="Juego('AgilidadaMasListado')">Agilidad+listado</button>  
+    <button routerLink="/error">Error</button>
+  
+</div-->
+
+<!--nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/Principal">Inicio</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/Juegos">Juegos</a></li>
+        <li><a data-toggle="tooltip" title="Hooray!" (click)="Juego('Adivina')">Adivina</a></li>
+        <li><a  (click)="Juego('Agilidad')">Agilidad</a></li>
+        <li><a  (click)="Juego('AdivinaMasListado')">Adivina+listado</a></li>
+        <li><a  (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+        </ul>
+    </div>
+  </nav-->
+  
+  <nav class="navbar navbar-dark bg-dark">
+   
+      
+      <div class="container-fluid"> 
+         <!-- -->
+          <div class="btn-group">
+            <button class="btn btn-outline-info mr-sm-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Juegos
+            </button>
+            <div class="dropdown-menu">
+                <button class="dropdown-item" routerLink="/Juegos/Preguntados" type="button">Preguntados</button>
+                <button class="dropdown-item" routerLink="/Juegos/Agilidad" type="button">Agilidad Aritmetica</button>
+                <button class="dropdown-item" routerLink="/Juegos/Adivina" type="button">Adivina el numero</button>
+                <button class="dropdown-item" routerLink="/Juegos/PPT" type="button">Piedra papel o tijeras</button>
+                <button class="dropdown-item" routerLink="/Juegos/Anagrama" type="button">Anagrama</button>
+            </div>
+          </div>
+<!-- --> 
+        
+        <div class="navbar-header">   
+          <button class="btn btn-outline-info mr-sm-2" routerLink="/Principal">Inicio</button>
+        
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a routerLink="/Juegos">Menú de Juegos</a></li>
+                <li><a data-toggle="tooltip" title="Hooray!" (click)="Juego('Adivina')">Adivina</a></li>
+                <li><a  (click)="Juego('Agilidad')">Agilidad</a></li>
+                <li><a  (click)="Juego('AdivinaMasListado')">Adivina+listado</a></li>
+                <li><a  (click)="Juego('AgilidadaMasListado')">Agilidad+listado</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mis Datos</a></li>
+                  <li><a href="/Login"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
+                </ul>
+        </div>
+      </div>
+    </nav>
+      
+   

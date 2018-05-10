@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="btn-group">
+        <button class="btn btn-outline-info mr-sm-2 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Juegos
+        </button>
+        <div class="dropdown-menu">
+            <button class="dropdown-item" routerLink="/Juegos/Preguntados" type="button">Preguntados</button>
+            <button class="dropdown-item" routerLink="/Juegos/Agilidad" type="button">Agilidad Aritmetica</button>
+            <button class="dropdown-item" routerLink="/Juegos/Adivina" type="button">Adivina el numero</button>
+            <button class="dropdown-item" routerLink="/Juegos/PPT" type="button">Piedra papel o tijeras</button>
+            <button class="dropdown-item" routerLink="/Juegos/Anagrama" type="button">Anagrama</button>
+        </div>
+    </div>
+    <form class="form-inline" [hidden]="!logeado">
+      
+      <button class="btn btn-outline-info mr-sm-2" routerLink="/Registro">Registro</button>
+      <button class="btn btn-outline-info my-2 my-sm-0" routerLink="/Login">Iniciar sesion</button>
+      
+    </form>
+    <form class="form-inline" [hidden]="logeado">
+      
+      <h5 style="color:#17a2b8">Buen dia, {{usuario}} </h5>
+      <button class="btn btn-outline-info my-2 my-sm-0" (click)="LogOut()">Salir sesion</button>
+      
+    </form>
+</nav>
+<div class="panel panel-default">
+   
+  <div class="hero-text">
+      <h1 style="font-family: Times New Roman, Times, serif;font-size:50px">Sala de Juegos</h1>
+      
+      <a href="https://github.com/marcosdelacuadra"target="_blank">en GitHub <i class="fa fa-github"></i></a>
+      <a  routerLink="/QuienSoy" >Quien Soy? <i class="fa fa-user"></i></a>
+  </div>
+  
+  <br>
+</div>

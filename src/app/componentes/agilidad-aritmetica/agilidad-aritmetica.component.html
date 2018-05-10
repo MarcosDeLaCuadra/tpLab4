@@ -1,0 +1,59 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--app-menu></app-menu-->
+<!-- index.html -->
+
+
+<form name="juego" class="tamanioForm">
+    <div class="card" style="width: 34rem;;">
+        <div class="card-header">
+          Agilidad Arimetica
+        </div>
+    <mat-list role="list">
+        <mat-list-item role="listitem">
+        <h3>Primer número: </h3> 
+        </mat-list-item>  
+      <mat-list-item role="listitem">
+           <input [(ngModel)]="nuevoJuego.numeroUno" placeholder="ingrese numero" name="numeroUno" type="text" class="form-control inputNumeros" readonly/>
+        </mat-list-item>
+        
+            <mat-list-item role="listitem">
+            <h3>Operador: </h3> 
+            </mat-list-item>
+
+        <mat-list-item role="listitem">
+         
+          <input [(ngModel)]="nuevoJuego.Operador" placeholder="ingrese numero" name="Operador" type="text" class="form-control inputNumeros" readonly/>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <h3> Segundo número: </h3> 
+            </mat-list-item>
+        <mat-list-item role="listitem">
+           
+            <input [(ngModel)]="nuevoJuego.numeroDos" placeholder="ingrese numero" name="numeroDos" type="text" class="form-control inputNumeros" readonly/>
+   
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <h3> Respuesta:</h3> 
+            </mat-list-item>
+        <mat-list-item role="listitem">
+             <input [(ngModel)]="numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control inputNumeros" />
+   
+        </mat-list-item>
+      </mat-list>
+        <div class="botonNuevo" id="Mensajes">
+          <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg ">Verificar {{Tiempo}} </button></h2>
+          <h2 [hidden]="!ocultarVerificar"><button  (click)="NuevoJuego()"  class="btn btn-info btn-lg ">Nuevo</button></h2>
+          <h2 [hidden]="spinner">Esperando numero...<mat-spinner></mat-spinner></h2>
+          <!--<h2><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2> -->
+          <div [hidden]="mensajeResultado">
+          <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
+          <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
+          </div>
+        </div>
+     
+    </div>
+  
+
+
+
+</form>

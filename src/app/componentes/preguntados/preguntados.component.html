@@ -1,0 +1,41 @@
+<div class="container divPrincipal" name="container">
+    <div class="iniciar animated zoomInDown ">            
+        <button pButton type="button" [hidden]="iniciar" (click)="Iniciar()" label="Iniciar"  class="ui-button-info button-principal "></button>
+        <h2 [hidden]="spinner" class="buscar">Buscando pregunta...
+            <div class="spinnner">
+                    <mat-spinner></mat-spinner>
+            </div>
+        </h2>
+    </div>
+
+      
+    <div [hidden]="tema" class="animation-target">
+        <h1> {{juegoNuevo.tema}} </h1>      
+        <button pButton type="button" (click)="Aceptar()" label="Aceptar" class="ui-button-success"></button>
+        <button pButton type="button" (click)="Rechazar()" label="Rechazar"  class="ui-button-danger"></button>    
+    </div>
+
+    <div  [hidden]="aceptar" class="container" >
+        <h1 style="margin-right: 31%;">{{juegoNuevo.pregunta}} </h1>
+    
+        <tr *ngFor="let respuesta of juegoNuevo.respuestas; let i = index">
+               
+                <button pButton type="button" (click)="Respuesta(i)" label="{{respuesta}}" style="padding: 0.25em 17em; " id= "respuesta{{i}}"  class="ui-button-info ui-g-12"></button>
+                <td  > </td>
+            <br>
+            
+        </tr>
+        <div [hidden]="!gano" class="sample-show-hide" >
+            <h1> Ganaste!!!</h1>
+            <button pButton type="button" (click)="CrearJuegoNuevo()" label="Juego nuevo" class="ui-button-success"></button>
+            <button pButton type="button" (click)="Rechazar()" label="Menu principal"  class="ui-button-danger"></button>   
+        </div>
+        <div [hidden]="!perdio" class="sample-show-hide">
+            <h1> Perdiste!!!</h1>
+            <button pButton type="button" (click)="CrearJuegoNuevo()" label="Juego nuevo" class="ui-button-success"></button>
+            <button pButton type="button" (click)="Rechazar()" label="Menu principal"  class="ui-button-danger"></button>   
+        </div>
+        
+        
+    </div>
+</div>

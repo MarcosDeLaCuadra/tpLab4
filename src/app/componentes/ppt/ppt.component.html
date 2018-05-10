@@ -1,0 +1,44 @@
+<div class="card text-white bg-info mb-3 cardPrimaria" >
+  <div class="card-header"><h4>Piedra, papel y tijeras</h4></div>
+  <div class="card-body" style="    padding-bottom: 380px;">
+    
+    <p class="title">Juego de agilidad mental</p>
+    <p>UTN FRA </p>
+   
+    <div  class="iniciar animated zoomInDown ">            
+      <button pButton type="button" [hidden]="iniciar" (click)="Iniciar()" label="Iniciar"  class="ui-button-info button-principal "></button>
+      
+
+    </div> 
+
+     <div [hidden]="mostrarImg">
+       <h3>Seleccione una figura </h3>
+      <img class="img-thumbnail mostrarImg" (click)="Elejir('piedra')"  src="./assets/imagenes/piedra.png" alt="Avatar" >
+      <img class="img-thumbnail mostrarImg" (click)="Elejir('papel')"  src="./assets/imagenes/papel.png" alt="Avatar" >
+      <img class="img-thumbnail mostrarImg" (click)="Elejir('tijeras')"  src="./assets/imagenes/tijeras.png" alt="Avatar" >
+        
+     </div>
+     <div [hidden]="resultado">
+      <div [hidden]="imgResul" id="elejido" class="resultado">
+      
+      </div>
+      <div [hidden]="imgResul" id="maquina" class="resultado">
+        
+      </div>
+      <div [hidden]="!gano">
+        <h1>Ganaste!!!</h1> 
+        <button pButton type="button" (click)="CrearJuegoNuevo()" label="Juego nuevo" class="ui-button-success"></button>
+        <button pButton type="button" (click)="Rechazar()" label="Menu principal"  class="ui-button-danger"></button>   
+
+      </div>
+      <div [hidden]="!perdio">
+          <h1>Perdiste!!!</h1>
+          <button pButton type="button" (click)="CrearJuegoNuevo()" label="Juego nuevo" class="ui-button-success"></button>
+          <button pButton type="button" (click)="Rechazar()" label="Menu principal"  class="ui-button-danger"></button>   
+
+      </div>
+     
+    </div>
+
+</div>
+</div>
